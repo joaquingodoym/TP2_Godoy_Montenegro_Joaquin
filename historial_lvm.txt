@@ -1,0 +1,42 @@
+    1  pwd
+    2  sudo fdisk -l
+    3  exit
+    4  fdisk
+    5  fdisk -l
+    6  sudo fdisk -l
+    7  fdisk /dev/sdb
+    8  sudo fdisk /dev/sdb
+    9  sudo fdisk -l
+   10  sudo fdisk /dev/sdd
+   11  sudo fdisk -l
+   12  free
+   13  -h
+   14  free -h
+   15  sudo mkswap /dev/sdd1
+   16  free -h
+   17  sudo swapon /dev/sdd1
+   18  free -h
+   19  cat /proc/swaps
+   20  sudo fdisk /dev/sdc
+   21  sudo wipefs -a /dev/sdc1
+   22  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   23  sudo pvs
+   24  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   25  vgs
+   26  sudo vgs
+   27  sudo pvs
+   28  sudo vgcreate vg_web /dev/sdc2
+   29  sudo pvs
+   30  sudo lvcreate -L 1G vg_web -n lv_web1
+   31  sudo lvcreate -L 512M vg_web -n lv_web2
+   32  sudo lvcreate -L 512M vg_web -n lv_web3
+   33  sudo lvs
+   34  sudo pvs
+   35  sudo fdisk -l
+   36  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   37  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   38  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   39  sudo pvs > pvs.txt
+   40  sudo vgs > vgs.txt
+   41  sudo lvs > lvs.txt
+   42  history > historial_lvm.txt
